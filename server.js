@@ -27,6 +27,8 @@ app.get('/', function (req, res) {
         res.end()
       }
     })
+  } else {
+    res.json('hi')
   }
 })
 
