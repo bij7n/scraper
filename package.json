@@ -4,7 +4,7 @@
   "description": "scrap og tags",
   "main": "index.js",
   "engines": {
-    "node" : "16.x"
+    "node": "16.x"
   },
   "scripts": {
     "start": "node index.js"
@@ -20,6 +20,7 @@
     "url": "https://github.com/bij7n/scraper/issues"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "open-graph-scraper": "^4.11.0"
   }
 }
