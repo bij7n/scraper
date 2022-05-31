@@ -1,6 +1,8 @@
-var ogs = require('open-graph-scraper')
-var express = require('express')
-var app = express()
+const ogs = require('open-graph-scraper')
+const express = require('express')
+const app = express()
+
+app.use(express.json({ extended: false }))
 
 app.all('/', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*')
@@ -10,8 +12,8 @@ app.all('/', function (req, res, next) {
 
 app.get('/', function (req, res) {
   if (req.query['url']) {
-    var siteUrl = req.query['url']
-    var options = {
+    const siteUrl = req.query['url']
+    const options = {
       'url': siteUrl,
       'headers': {
         'accept-language': 'en',
@@ -32,7 +34,5 @@ app.get('/', function (req, res) {
   }
 })
 
-var port = process.env.PORT || 5000
-app.listen(port)
-
-console.log('Express server listening on port %d', port)
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => console.log(`Server is running in port ${PORT}`))
