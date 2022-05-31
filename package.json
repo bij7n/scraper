@@ -1,0 +1,21 @@
+{
+    "name": "my-api",
+    "version": "1.1.0",
+    "description": "Extract Open Graph info.",
+    "scripts": {
+      "start": "node server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+      "express": "^4.15.4",
+      "open-graph-scraper": "^2.5.4"
+    },
+    "devDependencies": {
+      "request": "^2.81.0",
+      "tape": "^4.7.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/your-repo"
+    }
+  }
